@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt i wsparcie — RELIKT</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0a0c0b; color: #c8cfc8; font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 13px; line-height: 1.8; min-height: 100vh; }
+body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(75,200,160,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(75,200,160,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none; z-index: 0; }
+.page { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 48px; padding-bottom: 20px; border-bottom: 1px solid #1e2420; }
+.logo { font-size: 20px; font-weight: 700; letter-spacing: 2px; }
+.logo .re { color: #c8a84b; }
+.logo .likt { color: #4bc8a0; }
+.back-btn { background: none; border: 1px solid #2a3030; color: #666; padding: 6px 14px; border-radius: 3px; font-family: monospace; font-size: 11px; text-decoration: none; transition: all 0.2s; letter-spacing: 1px; }
+.back-btn:hover { border-color: #4bc8a0; color: #4bc8a0; }
+.doc-header { margin-bottom: 40px; }
+.doc-label { font-size: 10px; color: #4bc8a0; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; }
+.doc-title { font-size: 22px; font-weight: 700; color: #e8ede0; letter-spacing: 1px; margin-bottom: 12px; }
+.section { margin-bottom: 36px; padding: 24px; background: #0e1210; border: 1px solid #1a2020; border-radius: 4px; border-left: 3px solid #1e2a25; }
+.section.highlight { border-left-color: #c8a84b; }
+.section-num { font-size: 9px; color: #4bc8a0; letter-spacing: 3px; margin-bottom: 8px; text-transform: uppercase; }
+.section h2 { font-size: 13px; font-weight: 700; color: #e8ede0; letter-spacing: 1px; margin-bottom: 14px; text-transform: uppercase; }
+.section p { margin-bottom: 10px; color: #a0a8a0; }
+.contact-box { background: #0e1210; border: 1px solid #1e3028; border-radius: 4px; padding: 20px 24px; margin-top: 10px; }
+.contact-box .label { font-size: 10px; color: #4bc8a0; letter-spacing: 2px; margin-bottom: 8px; }
+.contact-box .value { color: #e8ede0; font-size: 13px; margin-bottom: 4px; }
+.contact-box .sub { color: #666; font-size: 11px; }
+ul.list { list-style: none; padding: 0; margin: 10px 0; }
+ul.list li { padding: 4px 0 4px 16px; color: #a0a8a0; position: relative; }
+ul.list li::before { content: '▸'; position: absolute; left: 0; color: #4bc8a0; font-size: 10px; top: 6px; }
+.green-text { color: #4bc8a0; }
+.footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #1a1e1a; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-text { font-size: 10px; color: #333; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="logo"><span class="re">RE</span><span class="likt">LIKT</span></div>
+    <a href="index.html" class="back-btn">← POWRÓT</a>
+  </div>
+
+  <div class="doc-header">
+    <div class="doc-label">Wsparcie techniczne</div>
+    <div class="doc-title">Kontakt i pomoc</div>
+  </div>
+
+  <div class="section highlight">
+    <div class="section-num">KONTAKT</div>
+    <h2>Dane kontaktowe</h2>
+    <div class="contact-box">
+      <div class="label">EL-TRICK PAWEŁ CHRZANOWSKI</div>
+      <div class="value">E-mail: pawel@el-trick.pl</div>
+      <div class="value">WWW: www.el-trick.pl</div>
+      <div class="value" style="margin-top:8px">ul. Leśna 14, 78-230 Karlino</div>
+      <div class="sub" style="margin-top:4px">NIP: 6722036631</div>
+    </div>
+    <p style="margin-top:14px">Na wiadomości odpowiadamy w ciągu <span class="green-text">48 godzin roboczych</span> (pon–pt).</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">WSPARCIE</div>
+    <h2>Zgłaszanie problemów</h2>
+    <p>W wiadomości prosimy podać:</p>
+    <ul class="list">
+      <li>Opis problemu (co się stało, kiedy, jakie kroki podjąłeś)</li>
+      <li>Wersję aplikacji (widoczna w ustawieniach)</li>
+      <li>Model urządzenia i system operacyjny</li>
+      <li>Screenshoty jeśli to możliwe</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-num">DOKUMENTY</div>
+    <h2>Dokumenty prawne</h2>
+    <ul class="list">
+      <li><a href="privacy.html" style="color:#4bc8a0">Polityka Prywatności (PL)</a></li>
+      <li><a href="en/privacy.html" style="color:#4bc8a0">Privacy Policy (EN)</a></li>
+      <li><a href="terms.html" style="color:#4bc8a0">Regulamin (PL)</a></li>
+      <li><a href="en/terms.html" style="color:#4bc8a0">Terms of Service (EN)</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <div class="footer-text">© 2026 El-trick Paweł Chrzanowski</div>
+  </div>
+</div>
+</body>
+</html>

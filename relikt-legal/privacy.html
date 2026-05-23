@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polityka Prywatności — RELIKT</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0a0c0b;
+  color: #c8cfc8;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(75,200,160,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75,200,160,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #1e2420;
+}
+.logo { font-size: 20px; font-weight: 700; letter-spacing: 2px; }
+.logo .re { color: #c8a84b; }
+.logo .likt { color: #4bc8a0; }
+.back-btn {
+  background: none;
+  border: 1px solid #2a3030;
+  color: #666;
+  padding: 6px 14px;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  letter-spacing: 1px;
+}
+.back-btn:hover { border-color: #4bc8a0; color: #4bc8a0; }
+.doc-header { margin-bottom: 40px; }
+.doc-label { font-size: 10px; color: #4bc8a0; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; }
+.doc-title { font-size: 22px; font-weight: 700; color: #e8ede0; letter-spacing: 1px; margin-bottom: 12px; }
+.doc-meta { font-size: 10px; color: #444; letter-spacing: 1px; }
+.doc-meta span { color: #666; }
+.section {
+  margin-bottom: 36px;
+  padding: 24px;
+  background: #0e1210;
+  border: 1px solid #1a2020;
+  border-radius: 4px;
+  border-left: 3px solid #1e2a25;
+}
+.section.highlight { border-left-color: #c8a84b; }
+.section.important { border-left-color: #c84b4b; }
+.section-num { font-size: 9px; color: #4bc8a0; letter-spacing: 3px; margin-bottom: 8px; text-transform: uppercase; }
+.section h2 { font-size: 13px; font-weight: 700; color: #e8ede0; letter-spacing: 1px; margin-bottom: 14px; text-transform: uppercase; }
+.section p { margin-bottom: 10px; color: #a0a8a0; }
+.section p:last-child { margin-bottom: 0; }
+ul.list { list-style: none; padding: 0; margin: 10px 0; }
+ul.list li { padding: 4px 0 4px 16px; color: #a0a8a0; position: relative; }
+ul.list li::before { content: '▸'; position: absolute; left: 0; color: #4bc8a0; font-size: 10px; top: 6px; }
+.highlight-text { color: #c8a84b; font-weight: 600; }
+.green-text { color: #4bc8a0; }
+.red-text { color: #c84b4b; }
+.data-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 11px; }
+.data-table th { background: #141a16; color: #4bc8a0; padding: 8px 10px; text-align: left; border-bottom: 1px solid #1e2a25; font-weight: 600; letter-spacing: 1px; font-size: 10px; text-transform: uppercase; }
+.data-table td { padding: 8px 10px; border-bottom: 1px solid #141a14; color: #a0a8a0; vertical-align: top; }
+.data-table tr:last-child td { border-bottom: none; }
+.contact-box { background: #0e1210; border: 1px solid #1e3028; border-radius: 4px; padding: 16px 20px; margin-top: 10px; }
+.contact-box .label { font-size: 10px; color: #4bc8a0; letter-spacing: 2px; margin-bottom: 4px; }
+.contact-box .value { color: #e8ede0; font-size: 12px; }
+.footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #1a1e1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-text { font-size: 10px; color: #333; letter-spacing: 1px; }
+.footer-ver { font-size: 10px; color: #2a3a30; }
+.lang-switch { display: flex; gap: 8px; margin-bottom: 24px; }
+.lang-btn { background: none; border: 1px solid #2a3030; color: #666; padding: 4px 12px; border-radius: 3px; font-family: monospace; font-size: 10px; cursor: pointer; text-decoration: none; letter-spacing: 1px; transition: all 0.2s; }
+.lang-btn:hover, .lang-btn.active { border-color: #4bc8a0; color: #4bc8a0; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="logo"><span class="re">RE</span><span class="likt">LIKT</span></div>
+    <a href="index.html" class="back-btn">← POWRÓT</a>
+  </div>
+
+  <div class="lang-switch">
+    <a href="privacy.html" class="lang-btn active">PL</a>
+    <a href="en/privacy.html" class="lang-btn">EN</a>
+  </div>
+
+  <div class="doc-header">
+    <div class="doc-label">Dokument prawny</div>
+    <div class="doc-title">Polityka Prywatności</div>
+    <div class="doc-meta">Wersja: <span>1.0</span> &nbsp;|&nbsp; Data: <span>2026-03-01</span> &nbsp;|&nbsp; Obowiązuje od: <span>2026-03-01</span></div>
+  </div>
+
+  <div class="section highlight">
+    <div class="section-num">§ 01</div>
+    <h2>Administrator danych osobowych</h2>
+    <p>Administratorem Twoich danych osobowych jest:</p>
+    <div class="contact-box">
+      <div class="label">ADMINISTRATOR DANYCH</div>
+      <div class="value">El-trick Paweł Chrzanowski</div>
+      <div class="value" style="margin-top:4px;font-size:11px;color:#888">ul. Leśna 14, 78-230 Karlino</div>
+      <div class="value" style="margin-top:4px;font-size:11px;color:#888">NIP: 6722036631</div>
+      <div class="value" style="margin-top:4px;font-size:11px;color:#888">E-mail: pawel@el-trick.pl</div>
+    </div>
+    <p style="margin-top:12px">W sprawach dotyczących przetwarzania danych osobowych możesz kontaktować się z Administratorem pisemnie na powyższy adres e-mail.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 02</div>
+    <h2>Jakie dane zbieramy</h2>
+    <p>W ramach korzystania z aplikacji RELIKT przetwarzamy następujące dane:</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Kategoria danych</th><th>Opis</th><th>Cel</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="highlight-text">Dane logowania</span></td>
+          <td>Login użytkownika, hasło (hashowane bcrypt)</td>
+          <td>Uwierzytelnianie</td>
+        </tr>
+        <tr>
+          <td><span class="highlight-text">Dane lokalizacyjne</span></td>
+          <td>Współrzędne GPS podczas aktywnej sesji terenowej</td>
+          <td>Funkcje nawigacyjne, dokumentacja stanowisk</td>
+        </tr>
+        <tr>
+          <td><span class="highlight-text">Dane znalezisk</span></td>
+          <td>Opis, kategoria, głębokość, zdjęcia, notatki terenowe</td>
+          <td>Dokumentacja badań, generowanie raportów WKZ</td>
+        </tr>
+        <tr>
+          <td><span class="highlight-text">Dane techniczne</span></td>
+          <td>Data logowania, adres IP, typ przeglądarki</td>
+          <td>Bezpieczeństwo, wykrywanie nadużyć</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Dane lokalizacyjne i zdjęcia są zbierane wyłącznie za Twoją zgodą (uprawnienie systemowe GPS/aparat). Możesz je cofnąć w ustawieniach urządzenia.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 03</div>
+    <h2>Dane przetwarzane przez podmioty trzecie</h2>
+    <p>Aplikacja korzysta z następujących zewnętrznych procesorów danych:</p>
+    <ul class="list">
+      <li><span class="highlight-text">Supabase Inc.</span> — baza danych i uwierzytelnianie (serwery w UE). Polityka prywatności: <span class="green-text">supabase.com/privacy</span></li>
+      <li><span class="highlight-text">Netlify Inc.</span> — hosting aplikacji webowej. Polityka: <span class="green-text">netlify.com/privacy</span></li>
+    </ul>
+    <p>Administratorzy tych usług przetwarzają dane wyłącznie w zakresie niezbędnym do świadczenia usługi technicznej.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 04</div>
+    <h2>Podstawa prawna przetwarzania</h2>
+    <ul class="list">
+      <li><span class="green-text">Art. 6 ust. 1 lit. b RODO</span> — wykonanie umowy (świadczenie usług aplikacji)</li>
+      <li><span class="green-text">Art. 6 ust. 1 lit. a RODO</span> — Twoja zgoda (dane lokalizacyjne, zdjęcia)</li>
+      <li><span class="green-text">Art. 6 ust. 1 lit. f RODO</span> — prawnie uzasadniony interes (bezpieczeństwo systemu)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 05</div>
+    <h2>Okres przechowywania danych</h2>
+    <ul class="list">
+      <li>Dane konta użytkownika — przez czas trwania konta + 30 dni po jego usunięciu</li>
+      <li>Dane znalezisk i sesji terenowych — przez czas trwania konta lub do usunięcia przez użytkownika</li>
+      <li>Logi techniczne (IP, daty logowań) — maksymalnie 90 dni</li>
+      <li>Po usunięciu konta wszystkie dane są trwale usuwane w ciągu 14 dni roboczych</li>
+    </ul>
+  </div>
+
+  <div class="section highlight">
+    <div class="section-num">§ 06</div>
+    <h2>Twoje prawa (RODO)</h2>
+    <ul class="list">
+      <li><span class="highlight-text">Prawo dostępu</span> — możesz zażądać informacji o przetwarzanych danych</li>
+      <li><span class="highlight-text">Prawo do sprostowania</span> — możesz poprawić nieprawidłowe dane</li>
+      <li><span class="highlight-text">Prawo do usunięcia</span> — możesz zażądać usunięcia swoich danych</li>
+      <li><span class="highlight-text">Prawo do przenoszenia</span> — możesz otrzymać swoje dane w formacie JSON</li>
+      <li><span class="highlight-text">Prawo do sprzeciwu</span> — możesz sprzeciwić się przetwarzaniu opartemu na prawnie uzasadnionym interesie</li>
+      <li><span class="highlight-text">Prawo do wycofania zgody</span> — w każdej chwili, bez wpływu na wcześniejsze przetwarzanie</li>
+    </ul>
+    <p style="margin-top:12px">Aby skorzystać z powyższych praw, skontaktuj się: <span class="green-text">pawel@el-trick.pl</span></p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 07</div>
+    <h2>Bezpieczeństwo danych</h2>
+    <ul class="list">
+      <li>Hasła hashowane algorytmem <span class="green-text">bcrypt</span> — nigdy nie przechowujemy haseł jawnie</li>
+      <li>Transmisja danych szyfrowana protokołem <span class="green-text">TLS 1.2/1.3 (HTTPS)</span></li>
+      <li>Dane przechowywane na serwerach Supabase w UE</li>
+      <li>Dostęp chroniony tokenami sesji z automatycznym wygasaniem</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 08</div>
+    <h2>Pliki cookie i localStorage</h2>
+    <p>Aplikacja RELIKT wykorzystuje <span class="highlight-text">localStorage</span> przeglądarki do przechowywania:</p>
+    <ul class="list">
+      <li>Tokenu sesji (uwierzytelnianie)</li>
+      <li>Preferencji użytkownika (tryb zapisu, ustawienia mapy)</li>
+      <li>Danych znalezisk w trybie offline (cache lokalny)</li>
+    </ul>
+    <p>Aplikacja <span class="red-text">nie używa</span> plików cookie śledzących ani marketingowych.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 09</div>
+    <h2>Dzieci</h2>
+    <p>Aplikacja RELIKT nie jest skierowana do dzieci poniżej 13. roku życia i świadomie nie zbiera danych od takich osób. Jeśli dowiesz się, że dziecko poniżej 13 lat przekazało nam dane, skontaktuj się z nami w celu ich usunięcia.</p>
+  </div>
+
+  <div class="section important">
+    <div class="section-num">§ 10</div>
+    <h2>Usunięcie konta i danych</h2>
+    <p>Masz prawo do całkowitego usunięcia swojego konta i wszystkich powiązanych danych:</p>
+    <ul class="list">
+      <li>Wyślij żądanie na adres: <span class="green-text">pawel@el-trick.pl</span></li>
+      <li>Podaj login konta do usunięcia</li>
+      <li>Usuniemy wszystkie dane w ciągu <span class="highlight-text">14 dni roboczych</span></li>
+      <li>Otrzymasz e-mail z potwierdzeniem usunięcia</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 11</div>
+    <h2>Zmiany polityki prywatności</h2>
+    <p>O wszelkich zmianach użytkownicy zostaną poinformowani poprzez powiadomienie w aplikacji. Aktualna wersja jest zawsze dostępna pod adresem: <span class="green-text">track.el-trick.pl/privacy.html</span></p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 12</div>
+    <h2>Prawo do złożenia skargi</h2>
+    <p>Jeśli uważasz, że przetwarzanie Twoich danych narusza RODO, masz prawo złożyć skargę do organu nadzorczego:</p>
+    <div class="contact-box">
+      <div class="label">URZĄD OCHRONY DANYCH OSOBOWYCH</div>
+      <div class="value">ul. Stawki 2, 00-193 Warszawa</div>
+      <div class="value" style="margin-top:4px;font-size:11px;color:#666">www.uodo.gov.pl &nbsp;|&nbsp; kancelaria@uodo.gov.pl</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-text">© 2026 El-trick Paweł Chrzanowski — Wszelkie prawa zastrzeżone</div>
+    <div class="footer-ver">POLITYKA PRYWATNOŚCI v1.0 / 2026-03-01</div>
+  </div>
+</div>
+</body>
+</html>

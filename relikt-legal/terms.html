@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regulamin — RELIKT</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0a0c0b;
+  color: #c8cfc8;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(75,200,160,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75,200,160,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+.page { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 48px; padding-bottom: 20px; border-bottom: 1px solid #1e2420; }
+.logo { font-size: 20px; font-weight: 700; letter-spacing: 2px; }
+.logo .re { color: #c8a84b; }
+.logo .likt { color: #4bc8a0; }
+.back-btn { background: none; border: 1px solid #2a3030; color: #666; padding: 6px 14px; border-radius: 3px; font-family: monospace; font-size: 11px; cursor: pointer; text-decoration: none; transition: all 0.2s; letter-spacing: 1px; }
+.back-btn:hover { border-color: #4bc8a0; color: #4bc8a0; }
+.doc-header { margin-bottom: 40px; }
+.doc-label { font-size: 10px; color: #4bc8a0; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; }
+.doc-title { font-size: 22px; font-weight: 700; color: #e8ede0; letter-spacing: 1px; margin-bottom: 12px; }
+.doc-meta { font-size: 10px; color: #444; letter-spacing: 1px; }
+.doc-meta span { color: #666; }
+.section { margin-bottom: 36px; padding: 24px; background: #0e1210; border: 1px solid #1a2020; border-radius: 4px; border-left: 3px solid #1e2a25; }
+.section.highlight { border-left-color: #c8a84b; }
+.section.important { border-left-color: #c84b4b; }
+.section-num { font-size: 9px; color: #4bc8a0; letter-spacing: 3px; margin-bottom: 8px; text-transform: uppercase; }
+.section h2 { font-size: 13px; font-weight: 700; color: #e8ede0; letter-spacing: 1px; margin-bottom: 14px; text-transform: uppercase; }
+.section p { margin-bottom: 10px; color: #a0a8a0; }
+.section p:last-child { margin-bottom: 0; }
+ul.list { list-style: none; padding: 0; margin: 10px 0; }
+ul.list li { padding: 4px 0 4px 16px; color: #a0a8a0; position: relative; }
+ul.list li::before { content: '▸'; position: absolute; left: 0; color: #4bc8a0; font-size: 10px; top: 6px; }
+.highlight-text { color: #c8a84b; font-weight: 600; }
+.green-text { color: #4bc8a0; }
+.red-text { color: #c84b4b; }
+.contact-box { background: #0e1210; border: 1px solid #1e3028; border-radius: 4px; padding: 16px 20px; margin-top: 10px; }
+.contact-box .label { font-size: 10px; color: #4bc8a0; letter-spacing: 2px; margin-bottom: 4px; }
+.contact-box .value { color: #e8ede0; font-size: 12px; }
+.footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #1a1e1a; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-text { font-size: 10px; color: #333; letter-spacing: 1px; }
+.footer-ver { font-size: 10px; color: #2a3a30; }
+.lang-switch { display: flex; gap: 8px; margin-bottom: 24px; }
+.lang-btn { background: none; border: 1px solid #2a3030; color: #666; padding: 4px 12px; border-radius: 3px; font-family: monospace; font-size: 10px; cursor: pointer; text-decoration: none; letter-spacing: 1px; transition: all 0.2s; }
+.lang-btn:hover, .lang-btn.active { border-color: #4bc8a0; color: #4bc8a0; }
+.warning-box { background: #1a0e0e; border: 1px solid #3a1e1e; border-radius: 4px; padding: 16px 20px; margin: 14px 0; }
+.warning-box p { color: #c87070; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="logo"><span class="re">RE</span><span class="likt">LIKT</span></div>
+    <a href="index.html" class="back-btn">← POWRÓT</a>
+  </div>
+
+  <div class="lang-switch">
+    <a href="terms.html" class="lang-btn active">PL</a>
+    <a href="en/terms.html" class="lang-btn">EN</a>
+  </div>
+
+  <div class="doc-header">
+    <div class="doc-label">Dokument prawny</div>
+    <div class="doc-title">Regulamin aplikacji RELIKT</div>
+    <div class="doc-meta">Wersja: <span>1.0</span> &nbsp;|&nbsp; Data: <span>2026-03-01</span> &nbsp;|&nbsp; Obowiązuje od: <span>2026-03-01</span></div>
+  </div>
+
+  <div class="section highlight">
+    <div class="section-num">§ 01</div>
+    <h2>Postanowienia ogólne</h2>
+    <p>Niniejszy Regulamin określa zasady korzystania z aplikacji mobilnej i webowej RELIKT (dalej: „Aplikacja"), świadczonej przez:</p>
+    <div class="contact-box">
+      <div class="label">USŁUGODAWCA</div>
+      <div class="value">El-trick Paweł Chrzanowski</div>
+      <div class="value" style="margin-top:4px;font-size:11px;color:#888">ul. Leśna 14, 78-230 Karlino</div>
+      <div class="value" style="margin-top:4px;font-size:11px;color:#888">NIP: 6722036631</div>
+      <div class="value" style="margin-top:4px;font-size:11px;color:#888">E-mail: pawel@el-trick.pl</div>
+    </div>
+    <p style="margin-top:12px">Korzystanie z Aplikacji oznacza akceptację niniejszego Regulaminu w całości.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 02</div>
+    <h2>Opis usługi</h2>
+    <p>RELIKT to aplikacja terenowa dla pasjonatów eksploracji historycznej i użytkowników wykrywaczy metali. Aplikacja umożliwia:</p>
+    <ul class="list">
+      <li>Rejestrację i dokumentację sesji terenowych z GPS</li>
+      <li>Katalogowanie i opis znalezisk (kategoria, głębokość, zdjęcia, notatki)</li>
+      <li>Przeglądanie historycznych map i warstw ortofoto</li>
+      <li>Generowanie raportów dla potrzeb dokumentacji WKZ</li>
+      <li>Weryfikację granic działek ewidencyjnych (ULDK API)</li>
+      <li>Zarządzanie historią sesji i eksport danych</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 03</div>
+    <h2>Licencja</h2>
+    <p>Usługodawca udziela Użytkownikowi niewyłącznej, niezbywalnej, nieprzenoszalnej licencji na korzystanie z Aplikacji wyłącznie na własny, niekomercyjny użytek.</p>
+    <p>Użytkownik nie jest uprawniony do:</p>
+    <ul class="list">
+      <li>Kopiowania, modyfikowania lub dystrybucji kodu Aplikacji</li>
+      <li>Inżynierii wstecznej (reverse engineering)</li>
+      <li>Odsprzedaży lub sublicencjonowania dostępu</li>
+      <li>Wykorzystywania Aplikacji do celów komercyjnych bez pisemnej zgody</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 04</div>
+    <h2>Obowiązki użytkownika i zgodność z prawem</h2>
+    <p>Użytkownik zobowiązuje się do:</p>
+    <ul class="list">
+      <li>Korzystania z Aplikacji wyłącznie zgodnie z obowiązującym prawem polskim i unijnym</li>
+      <li>Posiadania wymaganych zezwoleń WKZ przed prowadzeniem poszukiwań</li>
+      <li>Nienaruszania praw własności innych osób podczas poszukiwań terenowych</li>
+      <li>Zgłaszania znalezisk zgodnie z Ustawą o ochronie zabytków i opiece nad zabytkami</li>
+      <li>Nieprzekazywania danych dostępowych osobom trzecim</li>
+    </ul>
+    <p>Usługodawca nie ponosi odpowiedzialności za działania Użytkownika niezgodne z prawem prowadzone przy użyciu Aplikacji.</p>
+  </div>
+
+  <div class="section important">
+    <div class="section-num">§ 05</div>
+    <h2>Wyłączenie odpowiedzialności za dane</h2>
+    <p>Usługodawca dokłada wszelkich starań w zakresie bezpieczeństwa danych, jednak:</p>
+    <ul class="list">
+      <li>Nie ponosi odpowiedzialności za utratę danych spowodowaną awarią urządzenia, odinstalowaniem Aplikacji lub utratą dostępu do konta</li>
+      <li>Zaleca regularne tworzenie kopii zapasowych danych znalezisk</li>
+      <li>Nie gwarantuje dostępności usługi 24/7 — mogą wystąpić przerwy techniczne</li>
+    </ul>
+  </div>
+
+  <div class="section important">
+    <div class="section-num">§ 06</div>
+    <h2>Wyłączenie gwarancji</h2>
+    <p>Aplikacja jest udostępniana w stanie „TAK JAK JEST" (AS IS). Usługodawca nie udziela żadnych gwarancji co do:</p>
+    <ul class="list">
+      <li>Dokładności danych kartograficznych i granic działek (źródło: GUGiK/ULDK)</li>
+      <li>Kompletności i aktualności historycznych warstw mapowych</li>
+      <li>Nieprzerwanego działania Aplikacji</li>
+      <li>Braku błędów w oprogramowaniu</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 07</div>
+    <h2>Ograniczenie odpowiedzialności</h2>
+    <p>W maksymalnym zakresie dozwolonym przez prawo, Usługodawca nie ponosi odpowiedzialności za:</p>
+    <ul class="list">
+      <li>Pośrednie, przypadkowe lub następcze szkody wynikające z korzystania z Aplikacji</li>
+      <li>Decyzje podjęte na podstawie danych wyświetlanych w Aplikacji</li>
+      <li>Szkody wynikające z przerw w dostępie do usług zewnętrznych (Supabase, GUGiK)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 08</div>
+    <h2>Zmiany Regulaminu</h2>
+    <p>Usługodawca zastrzega sobie prawo do zmiany niniejszego Regulaminu. O zmianach Użytkownicy zostaną poinformowani poprzez powiadomienie w Aplikacji z co najmniej 14-dniowym wyprzedzeniem.</p>
+    <p>Brak sprzeciwu w terminie 14 dni od powiadomienia oznacza akceptację nowego Regulaminu. W przypadku sprzeciwu Użytkownik ma prawo usunąć konto.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 09</div>
+    <h2>Zakończenie korzystania</h2>
+    <p>Użytkownik może w każdej chwili zaprzestać korzystania z Aplikacji i usunąć konto. Usunięcie konta skutkuje trwałym usunięciem wszystkich danych w ciągu 14 dni roboczych.</p>
+    <p>Usługodawca może zablokować lub usunąć konto Użytkownika naruszającego niniejszy Regulamin, po uprzednim powiadomieniu.</p>
+  </div>
+
+  <div class="section highlight">
+    <div class="section-num">§ 10</div>
+    <h2>Prawo właściwe i jurysdykcja</h2>
+    <p>Niniejszy Regulamin podlega prawu polskiemu. Wszelkie spory wynikające z korzystania z Aplikacji będą rozstrzygane przez sąd właściwy dla siedziby Usługodawcy (Karlino, Polska).</p>
+    <p>Użytkownicy będący konsumentami mają prawo do skorzystania z pozasądowych metod rozstrzygania sporów (platforma ODR: <span class="green-text">ec.europa.eu/consumers/odr</span>).</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">§ 11</div>
+    <h2>Kontakt</h2>
+    <div class="contact-box">
+      <div class="label">KONTAKT</div>
+      <div class="value">El-trick Paweł Chrzanowski</div>
+      <div class="value" style="margin-top:4px;font-size:11px;color:#888">ul. Leśna 14, 78-230 Karlino</div>
+      <div class="value" style="margin-top:4px;font-size:11px;color:#888">E-mail: pawel@el-trick.pl</div>
+      <div class="value" style="margin-top:4px;font-size:11px;color:#888">WWW: www.el-trick.pl</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-text">© 2026 El-trick Paweł Chrzanowski — Wszelkie prawa zastrzeżone</div>
+    <div class="footer-ver">REGULAMIN v1.0 / 2026-03-01</div>
+  </div>
+</div>
+</body>
+</html>
